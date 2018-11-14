@@ -13,6 +13,12 @@ import kotlinx.android.synthetic.main.activity_example.*
 import kotlinx.coroutines.experimental.Job
 import kotlinx.coroutines.experimental.launch
 
+/*
+*
+* Please mind that this is only an example. The main projects are located out of this folder.
+*
+* */
+
 class ExampleActivity : AppCompatActivity() {
 
     companion object {

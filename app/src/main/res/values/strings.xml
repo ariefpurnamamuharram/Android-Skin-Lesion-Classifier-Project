@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Skin Lesion Classification by AI</string>
 
-    // For example starter pack
+    // Example
     <string name="btn_recognize_text">Who is This?</string>
     <string name="result_no_hero_found">Ops I don\'t know this Super Hero</string>
     <string name="result_confident_hero_found">This is surely %1$s.</string>
