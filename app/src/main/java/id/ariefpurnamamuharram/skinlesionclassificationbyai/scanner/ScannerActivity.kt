@@ -1,4 +1,4 @@
-package id.ariefpurnamamuharram.skinlesionclassificationbyai.example
+package id.ariefpurnamamuharram.skinlesionclassificationbyai.scanner
 
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -7,41 +7,35 @@ import android.util.Log
 import android.view.View
 import com.wonderkiln.camerakit.CameraKitImage
 import id.ariefpurnamamuharram.skinlesionclassificationbyai.R
-import id.ariefpurnamamuharram.skinlesionclassificationbyai.example.tensorflow.Classifier
-import id.ariefpurnamamuharram.skinlesionclassificationbyai.example.tensorflow.TensorFlowImageClassifier
-import kotlinx.android.synthetic.main.activity_example.*
+import id.ariefpurnamamuharram.skinlesionclassificationbyai.tensorflow.Classifier
+import id.ariefpurnamamuharram.skinlesionclassificationbyai.tensorflow.TensorFlowImageClassifier
+import kotlinx.android.synthetic.main.activity_scan.*
 import kotlinx.coroutines.experimental.Job
 import kotlinx.coroutines.experimental.launch
 
-/*
-*
-* Please mind that this is only an example. The main projects are located out of this folder.
-*
-* */
-
-class ExampleActivity : AppCompatActivity() {
+class ScannerActivity: AppCompatActivity() {
 
     companion object {
-        private const val TAG = "ExampleActivity"
+        private const val TAG = "ScannerActivity"
         private const val INPUT_WIDTH = 300
         private const val INPUT_HEIGHT = 300
         private const val IMAGE_MEAN = 128
         private const val IMAGE_STD = 128f
         private const val INPUT_NAME = "Mul"
         private const val OUTPUT_NAME = "final_result"
-        private const val MODEL_FILE = "file:///android_asset/hero_stripped_graph.pb"
-        private const val LABEL_FILE = "file:///android_asset/hero_labels.txt"
+        private const val MODEL_FILE = "file:///android_asset/"
+        private const val LABEL_FILE = "file:///android_asset/"
     }
 
     private var classifier: Classifier? = null
     private var initializeJob: Job? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_example)
+        setContentView(R.layout.activity_scan)
         initializeTensorClassifier()
-        buttonRecognize.setOnClickListener {
+        btnTakePicture.setOnClickListener { _ ->
             setVisibilityOnCaptured(false)
-            cameraView.captureImage {
+            camera.captureImage {
                 onImageCaptured(it)
             }
         }
@@ -63,15 +57,13 @@ class ExampleActivity : AppCompatActivity() {
         runOnUiThread {
             setVisibilityOnCaptured(true)
             if (results.isEmpty()) {
-                textResult.text = getString(R.string.result_no_hero_found)
+                textSkinLesion.text = getString(R.string.nothing_found)
+                textLevelOfConfidence.text = getString(R.string.none)
             } else {
-                val hero = results[0].title
+                val skinLesion = results[0].title
                 val confidence = results[0].confidence
-                textResult.text = when {
-                    confidence > 0.95 -> getString(R.string.result_confident_hero_found, hero)
-                    confidence > 0.85 -> getString(R.string.result_think_hero_found, hero)
-                    else -> getString(R.string.result_maybe_hero_found, hero)
-                }
+                textSkinLesion.text = skinLesion
+                textLevelOfConfidence.text = confidence.toString()
             }
         }
     }
@@ -84,14 +76,16 @@ class ExampleActivity : AppCompatActivity() {
     }
 
     private fun setVisibilityOnCaptured(isDone: Boolean) {
-        buttonRecognize.isEnabled = isDone
+        btnTakePicture.isEnabled = isDone
         if (isDone) {
             imageCaptured.visibility = View.VISIBLE
-            textResult.visibility = View.VISIBLE
+            textSkinLesion.visibility = View.VISIBLE
+            textLevelOfConfidence.visibility = View.VISIBLE
             progressBar.visibility = View.GONE
         } else {
             imageCaptured.visibility = View.GONE
-            textResult.visibility = View.GONE
+            textSkinLesion.visibility = View.GONE
+            textLevelOfConfidence.visibility = View.GONE
             progressBar.visibility = View.VISIBLE
         }
     }
@@ -104,7 +98,7 @@ class ExampleActivity : AppCompatActivity() {
                     IMAGE_MEAN, IMAGE_STD, INPUT_NAME, OUTPUT_NAME
                 )
                 runOnUiThread {
-                    buttonRecognize.isEnabled = true
+                    btnTakePicture.isEnabled = true
                 }
             } catch (e: Exception) {
                 throw RuntimeException("Error initializing TensorFlow!", e)
@@ -119,12 +113,12 @@ class ExampleActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        cameraView.start()
+        camera.start()
     }
 
     override fun onPause() {
         super.onPause()
-        cameraView.stop()
+        camera.stop()
     }
 
     override fun onDestroy() {

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    // Example
-    <dimen name="standard_padding">16dp</dimen>
-    <dimen name="camera_height">350dp</dimen>
-    <dimen name="result_view_size">100dp</dimen>
-    <dimen name="result_text_size">30sp</dimen>
+    <dimen name="standard_padding">9dp</dimen>
+    <dimen name="standard_margin">9dp</dimen>
+    <dimen name="interlayout_margin">13dp</dimen>
+    <dimen name="intercomponent_margin">7dp</dimen>
+    <dimen name="cardview_cornerradius">6dp</dimen>
+    <dimen name="cardview_cardelevation">2dp</dimen>
+    <dimen name="camera_height">240dp</dimen>
+
+    <dimen name="h1">24sp</dimen>
 
 </resources>

@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">Skin Lesion Classification by AI</string>
 
-    // Example
-    <string name="btn_recognize_text">Who is This?</string>
-    <string name="result_no_hero_found">Ops I don\'t know this Super Hero</string>
-    <string name="result_confident_hero_found">This is surely %1$s.</string>
-    <string name="result_think_hero_found">I think I see %1$s.</string>
-    <string name="result_maybe_hero_found">Hmm, is this %1$s?</string>
+    <string name="skin_lesion_scanner">Skin Lesion Scanner</string>
+    <string name="lesion_scanner_desc">Please take a picture of your skin lesion. Make sure the lesion image are covered up to 80% of the image. We will provide you the analysis based on the datasets we used.</string>
+    <string name="camera_view">Camera View</string>
+    <string name="image_preview">Image Preview</string>
+    <string name="results">Results</string>
+    <string name="skin_lesion">Skin lesion:</string>
+    <string name="level_of_confidence">Level of confidence:</string>
+    <string name="none">-</string>
+    <string name="more_details">More details…</string>
+    <string name="nothing_found">Nothings are found. Seems your skin is normal.</string>
 
 </resources>
