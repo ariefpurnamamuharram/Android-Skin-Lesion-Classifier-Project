@@ -13,6 +13,8 @@
     <string name="nothing_found">Nothings are found. Seems your skin is normal.</string>
     <string name="info">Info</string>
 
+    <string name="bullet">&#8226; </string>
+
     <!-- Splash Screen -->
     <string name="app_desc">Android Smart Skin Lesions Analyzer</string>
     <string name="copyright">Copyright \u00A9 2018</string>
@@ -40,6 +42,8 @@
     <string name="credits_04">Institut Teknologi Sepuluh Nopember</string>
     <string name="credits_04a">where we learn about Artificial Intelligence \nthrough Digital Talent Scholarship 2018 \nprovided by Kemkominfo Republik Indonesia</string>
 
-    <string name="bullet">&#8226; </string>
+    <!-- BottomNavigation Menu -->
+    <string name="home">Home</string>
+    <string name="learning_center">Learning Center</string>
 
 </resources>
