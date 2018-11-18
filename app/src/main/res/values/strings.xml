@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Skin Lesion Classification by AI</string>
+    <string name="app_name">The HAM10000</string>
 
     <string name="skin_lesion_scanner">Skin Lesion Scanner</string>
     <string name="lesion_scanner_desc">Please take a picture of your skin lesion. Make sure the lesion image are covered up to 80% of the image. We will provide you the analysis based on the datasets we used.</string>
@@ -11,6 +11,11 @@
     <string name="none">-</string>
     <string name="more_details">More details…</string>
     <string name="nothing_found">Nothings are found. Seems your skin is normal.</string>
+    <string name="info">Info</string>
+
+    <!-- Splash Screen -->
+    <string name="app_desc">Android Smart Skin Lesions Analyzer</string>
+    <string name="copyright">Copyright \u00A9 2018</string>
 
     <!-- Profile Panel -->
     <string name="profile_panel_header">Profile Panel</string>
@@ -27,13 +32,13 @@
 
     <!-- Credits -->
     <string name="credits_header">Our credits are belongs to…</string>
-    <string name="credits_01">Tschandl, Philipp, 2018, "The HAM10000 dataset, \na large collection of multi-source dermatoscopic \nimages of common pigmented skin lesions", \nhttps://doi,org/10.7910/DVN/DBW86T, \nHarvard Dataverse."</string>
+    <string name="credits_01">Tschandl, Philipp, 2018, "The HAM10000 \ndataset, large collection of multi-source \ndermatoscopic images of common \npigmented skin lesions", \nhttps://doi,org/10.7910/DVN/DBW86T, \nHarvard Dataverse."</string>
     <string name="credits_02">Flaticon</string>
     <string name="credits_02a">Icon made by Freepik \n(https://www.flaticon.com/authors/freepik) \nfrom www.flaticon.com </string>
     <string name="credits_03">Kemkominfo Republik Indonesia</string>
     <string name="credits_03a">for providing us Artificial Intelligence training \nthrough Digital Talent Scholarship 2018 \nprogram.</string>
     <string name="credits_04">Institut Teknologi Sepuluh Nopember</string>
-    <string name="credits_04a">where we learn about Artificial Intelligence \nthrough Digital Talent Scholarship 2018 provided \nby Kemkominfo Republik Indonesia</string>
+    <string name="credits_04a">where we learn about Artificial Intelligence \nthrough Digital Talent Scholarship 2018 \nprovided by Kemkominfo Republik Indonesia</string>
 
     <string name="bullet">&#8226; </string>
 
