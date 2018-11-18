@@ -7,8 +7,11 @@
     <dimen name="intercomponent_margin">7dp</dimen>
     <dimen name="cardview_cornerradius">6dp</dimen>
     <dimen name="cardview_cardelevation">2dp</dimen>
+    <dimen name="nav_cardview_cornerradius">6dp</dimen>
+    <dimen name="nav_cardview_cardelevation">6dp</dimen>
     <dimen name="camera_height">240dp</dimen>
 
     <dimen name="h1">24sp</dimen>
+    <dimen name="h3">18sp</dimen>
 
 </resources>

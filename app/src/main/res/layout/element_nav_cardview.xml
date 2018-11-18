@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standard_margin"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/standard_padding"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/intercomponent_margin"
+                android:src="@drawable/ic_search_scan"
+                tools:ignore="ContentDescription"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cuprum_bold"
+                android:textSize="@dimen/h3"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/nav_cardview_header"/>
+
+    </LinearLayout>
+
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+        <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/btnScanAbdomen"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:padding="@dimen/standard_padding"
+                        android:layout_margin="@dimen/standard_margin"
+                        app:cardCornerRadius="@dimen/cardview_cornerradius"
+                        android:elevation="@dimen/cardview_cardelevation">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="@dimen/standard_margin"
+                            android:layout_gravity="center_vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_abdomen_chest"
+                                android:layout_gravity="center"
+                                tools:ignore="ContentDescription"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/abdomen"
+                                android:layout_marginTop="@dimen/intercomponent_margin"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/cuprum_bold"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/btnScanBack"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:padding="@dimen/standard_padding"
+                        android:layout_margin="@dimen/standard_margin"
+                        app:cardCornerRadius="@dimen/cardview_cornerradius"
+                        android:elevation="@dimen/cardview_cardelevation">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="@dimen/standard_margin"
+                            android:layout_gravity="center_vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_back"
+                                android:layout_gravity="center"
+                                tools:ignore="ContentDescription"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/back"
+                                android:layout_marginTop="@dimen/intercomponent_margin"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/cuprum_bold"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/btnScanChest"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:padding="@dimen/standard_padding"
+                        android:layout_margin="@dimen/standard_margin"
+                        app:cardCornerRadius="@dimen/cardview_cornerradius"
+                        android:elevation="@dimen/cardview_cardelevation">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="@dimen/standard_margin"
+                            android:layout_gravity="center_vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_abdomen_chest"
+                                android:layout_gravity="center"
+                                tools:ignore="ContentDescription"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/chest"
+                                android:layout_marginTop="@dimen/intercomponent_margin"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/cuprum_bold"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/btnScanUpperExtremity"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:padding="@dimen/standard_padding"
+                        android:layout_margin="@dimen/standard_margin"
+                        app:cardCornerRadius="@dimen/cardview_cornerradius"
+                        android:elevation="@dimen/cardview_cardelevation">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="@dimen/standard_margin"
+                            android:layout_gravity="center_vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_arm"
+                                android:layout_gravity="center"
+                                tools:ignore="ContentDescription"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/upper_extremity"
+                                android:layout_marginTop="@dimen/intercomponent_margin"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/cuprum_bold"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                <android.support.v7.widget.CardView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/btnScanLowerExtremity"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:padding="@dimen/standard_padding"
+                        android:layout_margin="@dimen/standard_margin"
+                        app:cardCornerRadius="@dimen/cardview_cornerradius"
+                        android:elevation="@dimen/cardview_cardelevation">
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="@dimen/standard_margin"
+                            android:layout_gravity="center_vertical"
+                            tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_legs"
+                                android:layout_gravity="center"
+                                tools:ignore="ContentDescription"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/lower_extremity"
+                                android:layout_marginTop="@dimen/intercomponent_margin"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/cuprum_bold"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
