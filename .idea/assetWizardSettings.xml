@@ -5,7 +5,52 @@
       <map>
         <entry key="imageWizard">
           <value>
-            <PersistentState />
+            <PersistentState>
+              <option name="children">
+                <map>
+                  <entry key="imageAssetPanel">
+                    <value>
+                      <PersistentState>
+                        <option name="children">
+                          <map>
+                            <entry key="launcher">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="foregroundImage" value="C:\Users\Arief Purnama M\Downloads\logo.png" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                            <entry key="launcherLegacy">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="iconShape" value="NONE" />
+                                      <entry key="imageAsset" value="C:\Users\Arief Purnama M\Downloads\logo.png" />
+                                      <entry key="outputName" value="ic_logo_harvard_dataverse" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                        <option name="values">
+                          <map>
+                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
+                          </map>
+                        </option>
+                      </PersistentState>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </PersistentState>
           </value>
         </entry>
         <entry key="vectorWizard">
@@ -19,8 +64,11 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_search_scan" />
-                            <entry key="sourceFile" value="C:\Users\Arief Purnama M\Downloads\loupe.svg" />
+                            <entry key="height" value="103" />
+                            <entry key="outputName" value="ic_logo_flaticon" />
+                            <entry key="overrideSize" value="true" />
+                            <entry key="sourceFile" value="C:\Users\Arief Purnama M\Downloads\flaticon-logo.svg" />
+                            <entry key="width" value="561" />
                           </map>
                         </option>
                       </PersistentState>

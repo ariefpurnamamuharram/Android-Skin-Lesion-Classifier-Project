@@ -20,4 +20,12 @@
     <string name="upper_extremity">Upper Extremity</string>
     <string name="lower_extremity">Lower Extremity</string>
 
+    <!-- Credits -->
+    <string name="credits_header">Our credits are belongs to…</string>
+    <string name="credits_01">Tschandl, Philipp, 2018, "The HAM10000 dataset, \na large collection of multi-source dermatoscopic \nimages of common pigmented skin lesions", \nhttps://doi,org/10.7910/DVN/DBW86T, \nHarvard Dataverse."</string>
+    <string name="credits_02">Flaticon</string>
+    <string name="credits_02a">Icon made by Freepik \n(https://www.flaticon.com/authors/freepik) \nfrom www.flaticon.com </string>
+
+    <string name="bullet">&#8226; </string>
+
 </resources>
