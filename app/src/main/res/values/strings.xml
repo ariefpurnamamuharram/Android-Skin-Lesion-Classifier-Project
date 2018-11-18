@@ -25,6 +25,10 @@
     <string name="credits_01">Tschandl, Philipp, 2018, "The HAM10000 dataset, \na large collection of multi-source dermatoscopic \nimages of common pigmented skin lesions", \nhttps://doi,org/10.7910/DVN/DBW86T, \nHarvard Dataverse."</string>
     <string name="credits_02">Flaticon</string>
     <string name="credits_02a">Icon made by Freepik \n(https://www.flaticon.com/authors/freepik) \nfrom www.flaticon.com </string>
+    <string name="credits_03">Kemkominfo Republik Indonesia</string>
+    <string name="credits_03a">for providing us Artificial Intelligence training \nthrough Digital Talent Scholarship 2018 \nprogram.</string>
+    <string name="credits_04">Institut Teknologi Sepuluh Nopember</string>
+    <string name="credits_04a">where we learn about Artificial Intelligence \nthrough Digital Talent Scholarship 2018 provided \nby Kemkominfo Republik Indonesia</string>
 
     <string name="bullet">&#8226; </string>
 
