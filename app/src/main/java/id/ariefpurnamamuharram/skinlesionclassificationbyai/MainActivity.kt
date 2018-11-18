@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import id.ariefpurnamamuharram.skinlesionclassificationbyai.home.HomeFragment
+import id.ariefpurnamamuharram.skinlesionclassificationbyai.learningcenter.LearningCenterFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +31,11 @@ class MainActivity : AppCompatActivity() {
             R.id.nav_home -> {
                 val homeFragment = HomeFragment.newInstance()
                 openFragment(homeFragment)
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.nav_learning_center -> {
+                val learningCenterFragment = LearningCenterFragment.newInstance()
+                openFragment(learningCenterFragment)
                 return@OnNavigationItemSelectedListener true
             }
         }
