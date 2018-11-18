@@ -12,6 +12,11 @@
     <string name="more_details">More details…</string>
     <string name="nothing_found">Nothings are found. Seems your skin is normal.</string>
 
+    <!-- Profile Panel -->
+    <string name="profile_panel_header">Profile Panel</string>
+    <string name="my_profile">My Profile</string>
+    <string name="scan_history">Scan History</string>
+
     <!-- Navigation CardView Menu-->
     <string name="nav_cardview_header">Scan lesion by specific location…</string>
     <string name="abdomen">Abdomen</string>
