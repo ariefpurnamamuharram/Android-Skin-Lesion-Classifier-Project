@@ -23,8 +23,8 @@ class ScannerActivity: AppCompatActivity() {
         private const val IMAGE_STD = 128f
         private const val INPUT_NAME = "Mul"
         private const val OUTPUT_NAME = "final_result"
-        private const val MODEL_FILE = "file:///android_asset/model/test/hero_stripped_graph.pb"
-        private const val LABEL_FILE = "file:///android_asset/model/test/hero_labels.txt"
+        private const val MODEL_FILE = ""
+        private const val LABEL_FILE = ""
     }
 
     private var classifier: Classifier? = null

@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import id.ariefpurnamamuharram.skinlesionclassificationbyai.R
+import id.ariefpurnamamuharram.skinlesionclassificationbyai.scanner.ScannerActivity
+import kotlinx.android.synthetic.main.element_nav_cardview.view.*
+import org.jetbrains.anko.support.v4.startActivity
 
 class HomeFragment : Fragment() {
 
@@ -14,6 +17,10 @@ class HomeFragment : Fragment() {
     ): View? {
 
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
+
+        rootView.btnScanAbdomen.setOnClickListener {
+            startActivity<ScannerActivity>()
+        }
 
         return rootView
 
