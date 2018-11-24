@@ -4,8 +4,10 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/standard_padding"
-        android:orientation="horizontal">
+        android:layout_marginTop="@dimen/intercomponent_margin"
+        android:layout_marginBottom="@dimen/intercomponent_margin"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
 
     <ImageView
             android:layout_width="32dp"
@@ -17,7 +19,7 @@
             android:id="@+id/learning_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/intercomponent_margin"
+            android:layout_marginStart="@dimen/standard_margin"
             android:layout_gravity="center"
             android:textColor="@color/colorPrimary"
             android:fontFamily="@font/cuprum_regular"

@@ -12,19 +12,19 @@ import id.ariefpurnamamuharram.skinlesionclassificationbyai.R
 
 class LearningCenterFragment : Fragment() {
 
-    private var items: MutableList<LearningItem> = mutableListOf()
+    private var items: MutableList<ContentItem> = mutableListOf()
 
     private fun initData() {
         val name = resources.getStringArray(R.array.learning_center_content)
         items.clear()
         for (i in name.indices) {
-            items.add(LearningItem(name[i]))
+            items.add(ContentItem(name[i]))
         }
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val rootView = inflater.inflate(R.layout.fragment_learning_center, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_learning_content, container, false)
 
         val list = rootView.find<RecyclerView>(R.id.content_list)
         initData()

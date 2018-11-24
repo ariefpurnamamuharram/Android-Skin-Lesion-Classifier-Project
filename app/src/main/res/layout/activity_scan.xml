@@ -78,6 +78,7 @@
                             android:layout_height="@dimen/camera_height"
                             android:adjustViewBounds="true"
                             android:keepScreenOn="true"
+                            app:ckCropOutput="true"
                             app:ckFlash="auto"
                             app:ckDoubleTapToToggleFacing="true"
                             app:ckFocus="tapWithMarker"

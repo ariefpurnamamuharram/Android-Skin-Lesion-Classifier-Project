@@ -1,3 +1,3 @@
 package id.ariefpurnamamuharram.skinlesionclassificationbyai.learningcenter
 
-data class LearningItem(val name: String?)
+data class ContentItem(val name: String?)

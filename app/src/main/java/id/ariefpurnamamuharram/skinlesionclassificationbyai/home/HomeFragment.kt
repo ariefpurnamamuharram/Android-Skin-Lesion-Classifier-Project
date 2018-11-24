@@ -19,6 +19,25 @@ class HomeFragment : Fragment() {
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
 
         rootView.btnScanAbdomen.setOnClickListener {
+            startActivity<ScannerActivity>(
+                "modelPath" to "example_model/mobilenet_quant_v1_224.tflite",
+                "labelPath" to "example_model/labels.txt"
+            )
+        }
+
+        rootView.btnScanBack.setOnClickListener {
+            startActivity<ScannerActivity>()
+        }
+
+        rootView.btnScanChest.setOnClickListener {
+            startActivity<ScannerActivity>()
+        }
+
+        rootView.btnScanUpperExtremity.setOnClickListener {
+            startActivity<ScannerActivity>()
+        }
+
+        rootView.btnScanLowerExtremity.setOnClickListener {
             startActivity<ScannerActivity>()
         }
 

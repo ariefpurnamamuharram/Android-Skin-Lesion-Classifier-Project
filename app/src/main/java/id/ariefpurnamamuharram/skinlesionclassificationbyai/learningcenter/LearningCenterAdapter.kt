@@ -11,11 +11,11 @@ import org.jetbrains.anko.find
 
 class LearningCenterAdapter(
     private val context: Context?,
-    private val items: List<LearningItem>,
-    private val listener: (LearningItem) -> Unit
+    private val items: List<ContentItem>,
+    private val listener: (ContentItem) -> Unit
 ) : RecyclerView.Adapter<ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.item_learning_center_content, parent, false)
+        LayoutInflater.from(parent.context).inflate(R.layout.item_learning_content, parent, false)
     )
 
     override fun getItemCount(): Int = items.size
@@ -28,7 +28,7 @@ class LearningCenterAdapter(
 class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val learningItem = view.find<TextView>(R.id.learning_item)
 
-    fun bindItem(items: LearningItem, listener: (LearningItem) -> Unit) {
+    fun bindItem(items: ContentItem, listener: (ContentItem) -> Unit) {
         learningItem.text = items.name
         itemView.setOnClickListener {
             listener(items)

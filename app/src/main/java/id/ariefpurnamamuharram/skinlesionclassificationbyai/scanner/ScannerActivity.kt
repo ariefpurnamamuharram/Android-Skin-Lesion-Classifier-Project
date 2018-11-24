@@ -17,10 +17,11 @@ class ScannerActivity : AppCompatActivity() {
 
     companion object {
         private const val TAG = "ScannerActivity"
-        private const val MODEL_PATH = "example_model/mobilenet_quant_v1_224.tflite"
-        private const val LABEL_PATH = "example_model/labels.txt"
         private const val INPUT_SIZE = 224
     }
+
+    private lateinit var modelPath: String
+    private lateinit var labelPath: String
 
     private var classifier: Classifier? = null
     private var initializeJob: Job? = null
@@ -28,6 +29,8 @@ class ScannerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scan)
+        modelPath = intent.getStringExtra("modelPath")
+        labelPath = intent.getStringExtra("labelPath")
         initializeTensorClassifier()
         btnTakePicture.setOnClickListener { _ ->
             setVisibilityOnCaptured(false)
@@ -90,7 +93,7 @@ class ScannerActivity : AppCompatActivity() {
         initializeJob = launch {
             try {
                 classifier = TensorFlowImageClassifier.create(
-                    assets, MODEL_PATH, LABEL_PATH, INPUT_SIZE
+                    assets, modelPath, labelPath, INPUT_SIZE
                 )
                 runOnUiThread {
                     btnTakePicture.isEnabled = true
