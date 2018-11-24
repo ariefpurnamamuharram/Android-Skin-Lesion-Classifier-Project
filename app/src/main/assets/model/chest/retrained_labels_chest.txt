@@ -1,6 +1,0 @@
-chest akiec
-chest bcc
-chest bkl
-chest mel
-chest nv
-chest vasc

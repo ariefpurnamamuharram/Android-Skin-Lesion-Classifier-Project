@@ -46,4 +46,21 @@
     <string name="home">Home</string>
     <string name="learning_center">Learning Center</string>
 
+    <!-- Learning Center Content List -->
+    <array name="learning_center_content">
+        <item>Actinic Keatoses and Intraepithelial Carcinoma (Bowen\'s Disease)</item>
+        <item>Basal Cell Carcinoma</item>
+        <item>Benign Keratosis-Like Lesions</item>
+        <item>Dermatofibroma</item>
+        <item>Melanoma</item>
+        <item>Melanocytic Nevi</item>
+        <item>Vascular Lesions</item>
+    </array>
+
+    <!-- LearningCenterFragment -->
+    <string name="lcf_header">Learning Center</string>
+
+    <!-- Content -->
+    <string name="bcc_header">Basal Cell Carcinoma</string>
+    <string name="bcc_content_overview">BCCs (Basal Cell Carcinomas) are kinds of skin cancer that arises in the skin\'s basal cells, which line the deepest layer of the epidermis. The BCCs often look like open sores, red patches, pink growths, shiny bumps, or scars and are usually caused by a combination of cumulative and intense, occasional sun exposure. The prognosis for patients with BCC is excellent, but if the disease is allowed to progress, it can cause significant morbidity.</string>
 </resources>

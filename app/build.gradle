@@ -30,6 +30,10 @@ android {
             path "CMakeLists.txt"
         }
     }
+    aaptOptions {
+        noCompress "tflite"
+        noCompress "lite"
+    }
 }
 
 dependencies {
@@ -49,13 +53,12 @@ dependencies {
 
     // TensorFlow(TM) Lite
     //noinspection GradleDynamicVersion
-    implementation 'org.tensorflow:tensorflow-android:+'
-    //noinspection GradleDynamicVersion
     implementation 'org.tensorflow:tensorflow-lite:+'
 
     // CircleImageView
     implementation 'de.hdodenhof:circleimageview:2.2.0'
-    
+
+    // Wonderkiln - CameraKit
     implementation 'com.wonderkiln:camerakit:0.13.2'
 
     // Testing

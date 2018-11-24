@@ -13,22 +13,18 @@ import kotlinx.android.synthetic.main.activity_scan.*
 import kotlinx.coroutines.experimental.Job
 import kotlinx.coroutines.experimental.launch
 
-class ScannerActivity: AppCompatActivity() {
+class ScannerActivity : AppCompatActivity() {
 
     companion object {
         private const val TAG = "ScannerActivity"
-        private const val INPUT_WIDTH = 300
-        private const val INPUT_HEIGHT = 300
-        private const val IMAGE_MEAN = 128
-        private const val IMAGE_STD = 128f
-        private const val INPUT_NAME = "Mul"
-        private const val OUTPUT_NAME = "final_result"
-        private const val MODEL_FILE = ""
-        private const val LABEL_FILE = ""
+        private const val MODEL_PATH = "example_model/mobilenet_quant_v1_224.tflite"
+        private const val LABEL_PATH = "example_model/labels.txt"
+        private const val INPUT_SIZE = 224
     }
 
     private var classifier: Classifier? = null
     private var initializeJob: Job? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scan)
@@ -42,7 +38,7 @@ class ScannerActivity: AppCompatActivity() {
     }
 
     private fun onImageCaptured(it: CameraKitImage) {
-        val bitmap = Bitmap.createScaledBitmap(it.bitmap, INPUT_WIDTH, INPUT_HEIGHT, false)
+        val bitmap = Bitmap.createScaledBitmap(it.bitmap, INPUT_SIZE, INPUT_SIZE, false)
         showCapturedImage(bitmap)
         classifier?.let {
             try {
@@ -94,8 +90,7 @@ class ScannerActivity: AppCompatActivity() {
         initializeJob = launch {
             try {
                 classifier = TensorFlowImageClassifier.create(
-                    assets, MODEL_FILE, LABEL_FILE, INPUT_WIDTH, INPUT_HEIGHT,
-                    IMAGE_MEAN, IMAGE_STD, INPUT_NAME, OUTPUT_NAME
+                    assets, MODEL_PATH, LABEL_PATH, INPUT_SIZE
                 )
                 runOnUiThread {
                     btnTakePicture.isEnabled = true

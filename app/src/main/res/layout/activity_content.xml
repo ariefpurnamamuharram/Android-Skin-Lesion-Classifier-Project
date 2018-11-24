@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -13,23 +13,44 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:elevation="3dp">
 
-        <android.support.design.widget.TabLayout
-                android:id="@+id/tab"
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/content_img_header"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/standard_margin"
+                android:src="@drawable/img_content_bcc"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FFFFFFFF"/>
+
+        <TextView
+                android:id="@+id/content_title_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intercomponent_margin"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/h2"
+                android:fontFamily="@font/cuprum_bold"
+                android:text="@string/bcc_header"/>
+
+        <android.support.design.widget.TabLayout
+                android:id="@+id/content_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/intercomponent_margin"
                 app:tabGravity="fill"
                 app:tabMode="fixed"/>
 
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/standard_margin"
-            android:padding="@dimen/standard_padding"
-            android:orientation="vertical"
-            tools:ignore="UselessLeaf">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/content_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/standard_margin"
+        android:padding="@dimen/standard_padding"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    </LinearLayout>
-
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
