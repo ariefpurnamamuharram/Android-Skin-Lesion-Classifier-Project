@@ -20,25 +20,37 @@ class HomeFragment : Fragment() {
 
         rootView.btnScanAbdomen.setOnClickListener {
             startActivity<ScannerActivity>(
-                "modelPath" to "example_model/mobilenet_quant_v1_224.tflite",
-                "labelPath" to "example_model/labels.txt"
+                "modelPath" to "models/abdomen/retrained_graph_abdomen.lite",
+                "labelPath" to "models/abdomen/retrained_labels_abdomen.txt"
             )
         }
 
         rootView.btnScanBack.setOnClickListener {
-            startActivity<ScannerActivity>()
+            startActivity<ScannerActivity>(
+                "modelPath" to "models/back/retrained_graph_back.lite",
+                "labelPath" to "models/back/retrained_labels_back.txt"
+            )
         }
 
         rootView.btnScanChest.setOnClickListener {
-            startActivity<ScannerActivity>()
+            startActivity<ScannerActivity>(
+                "modelPath" to "models/chest/retrained_graph_chest.lite",
+                "labelPath" to "models/chest/retrained_labels_chest.txt"
+            )
         }
 
         rootView.btnScanUpperExtremity.setOnClickListener {
-            startActivity<ScannerActivity>()
+            startActivity<ScannerActivity>(
+                "modelPath" to "models/lower_extremity/retrained_graph_lower_extremity.lite",
+                "labelPath" to "models/lower_extremity/retrained_labels_lower_extremity.txt"
+            )
         }
 
         rootView.btnScanLowerExtremity.setOnClickListener {
-            startActivity<ScannerActivity>()
+            startActivity<ScannerActivity>(
+                "modelPath" to "models/upper_extremity/retrained_graph_upper_extremity.lite",
+                "labelPath" to "models/upper_extremity/retrained_labels_upper_extremity.txt"
+            )
         }
 
         return rootView

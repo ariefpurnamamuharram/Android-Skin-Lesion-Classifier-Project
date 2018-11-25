@@ -8,7 +8,7 @@ import android.view.View
 import com.wonderkiln.camerakit.CameraKitImage
 import id.ariefpurnamamuharram.skinlesionclassificationbyai.R
 import id.ariefpurnamamuharram.skinlesionclassificationbyai.tensorflow.Classifier
-import id.ariefpurnamamuharram.skinlesionclassificationbyai.tensorflow.TensorFlowImageClassifier
+import id.ariefpurnamamuharram.skinlesionclassificationbyai.tensorflow.TFImageClassifier
 import kotlinx.android.synthetic.main.activity_scan.*
 import kotlinx.coroutines.experimental.Job
 import kotlinx.coroutines.experimental.launch
@@ -92,7 +92,7 @@ class ScannerActivity : AppCompatActivity() {
     private fun initializeTensorClassifier() {
         initializeJob = launch {
             try {
-                classifier = TensorFlowImageClassifier.create(
+                classifier = TFImageClassifier.create(
                     assets, modelPath, labelPath, INPUT_SIZE
                 )
                 runOnUiThread {
