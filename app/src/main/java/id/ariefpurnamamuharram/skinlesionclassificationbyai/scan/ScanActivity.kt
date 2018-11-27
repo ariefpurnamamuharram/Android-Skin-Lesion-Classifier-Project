@@ -1,4 +1,4 @@
-package id.ariefpurnamamuharram.skinlesionclassificationbyai.scanner
+package id.ariefpurnamamuharram.skinlesionclassificationbyai.scan
 
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -10,13 +10,15 @@ import id.ariefpurnamamuharram.skinlesionclassificationbyai.R
 import id.ariefpurnamamuharram.skinlesionclassificationbyai.tensorflow.Classifier
 import id.ariefpurnamamuharram.skinlesionclassificationbyai.tensorflow.TFImageClassifier
 import kotlinx.android.synthetic.main.activity_scan.*
+import kotlinx.android.synthetic.main.element_results.*
+import kotlinx.android.synthetic.main.element_scan.*
 import kotlinx.coroutines.experimental.Job
 import kotlinx.coroutines.experimental.launch
 
-class ScannerActivity : AppCompatActivity() {
+class ScanActivity : AppCompatActivity() {
 
     companion object {
-        private const val TAG = "ScannerActivity"
+        private const val TAG = "ScanActivity"
         private const val INPUT_SIZE = 224
     }
 
@@ -29,6 +31,8 @@ class ScannerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scan)
+        element_scan.visibility = View.VISIBLE
+        element_results.visibility = View.GONE
         modelPath = intent.getStringExtra("modelPath")
         labelPath = intent.getStringExtra("labelPath")
         initializeTensorClassifier()
@@ -56,36 +60,40 @@ class ScannerActivity : AppCompatActivity() {
         runOnUiThread {
             setVisibilityOnCaptured(true)
             if (results.isEmpty()) {
-                textSkinLesion.text = getString(R.string.nothing_found)
-                textLevelOfConfidence.text = getString(R.string.none)
+                most_probable_lesion.text = getString(R.string.nothing_found)
+                most_probable_confidence_level.text = getString(R.string.none)
             } else {
                 val skinLesion = results[0].title
                 val confidence = results[0].confidence
-                textSkinLesion.text = skinLesion
-                textLevelOfConfidence.text = confidence.toString()
+                most_probable_lesion.text = skinLesion
+                most_probable_confidence_level.text = confidence.toString()
             }
         }
     }
 
     private fun showCapturedImage(bitmap: Bitmap?) {
         runOnUiThread {
-            imageCaptured.visibility = View.VISIBLE
-            imageCaptured.setImageBitmap(bitmap)
+            img_preview.visibility = View.VISIBLE
+            img_preview.setImageBitmap(bitmap)
         }
     }
 
     private fun setVisibilityOnCaptured(isDone: Boolean) {
         btnTakePicture.isEnabled = isDone
         if (isDone) {
-            imageCaptured.visibility = View.VISIBLE
-            textSkinLesion.visibility = View.VISIBLE
-            textLevelOfConfidence.visibility = View.VISIBLE
+            element_scan.visibility = View.GONE
+            element_results.visibility = View.VISIBLE
             progressBar.visibility = View.GONE
+            img_preview.visibility = View.VISIBLE
+            most_probable_lesion.visibility = View.VISIBLE
+            most_probable_confidence_level.visibility = View.VISIBLE
         } else {
-            imageCaptured.visibility = View.GONE
-            textSkinLesion.visibility = View.GONE
-            textLevelOfConfidence.visibility = View.GONE
+            element_scan.visibility = View.VISIBLE
+            element_results.visibility = View.GONE
             progressBar.visibility = View.VISIBLE
+            img_preview.visibility = View.GONE
+            most_probable_lesion.visibility = View.GONE
+            most_probable_confidence_level.visibility = View.GONE
         }
     }
 

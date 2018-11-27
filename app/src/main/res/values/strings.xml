@@ -1,29 +1,15 @@
 <resources>
     <string name="app_name">The HAM10000</string>
 
-    <string name="skin_lesion_scanner">Skin Lesion Scanner</string>
-    <string name="lesion_scanner_desc">Please take a picture of your skin lesion. Make sure the lesion image are covered up to 80% of the image. We will provide you the analysis based on the datasets we used.</string>
-    <string name="camera_view">Camera View</string>
-    <string name="image_preview">Image Preview</string>
-    <string name="results">Results</string>
-    <string name="skin_lesion">Skin lesion:</string>
-    <string name="level_of_confidence">Level of confidence:</string>
-    <string name="none">-</string>
-    <string name="more_details">More details…</string>
-    <string name="nothing_found">Nothings are found. Seems your skin is normal.</string>
-    <string name="info">Info</string>
-
-    <string name="bullet">&#8226; </string>
-
     <!-- Splash Screen -->
     <string name="app_desc">Android Smart Skin Lesions Analyzer</string>
     <string name="copyright">Copyright \u00A9 2018</string>
 
+    <!-- HomeFragment -->
     <!-- Profile Panel -->
     <string name="profile_panel_header">Profile Panel</string>
     <string name="my_profile">My Profile</string>
     <string name="scan_history">Scan History</string>
-
     <!-- Navigation CardView Menu-->
     <string name="nav_cardview_header">Scan lesion by specific location…</string>
     <string name="abdomen">Abdomen</string>
@@ -31,7 +17,6 @@
     <string name="chest">Chest</string>
     <string name="upper_extremity">Upper Extremity</string>
     <string name="lower_extremity">Lower Extremity</string>
-
     <!-- Credits -->
     <string name="credits_header">Our credits are belongs to…</string>
     <string name="credits_01">Tschandl, Philipp, 2018, "The HAM10000 \ndataset, large collection of multi-source \ndermatoscopic images of common \npigmented skin lesions", \nhttps://doi,org/10.7910/DVN/DBW86T, \nHarvard Dataverse."</string>
@@ -42,11 +27,9 @@
     <string name="credits_04">Institut Teknologi Sepuluh Nopember</string>
     <string name="credits_04a">where we learn about Artificial Intelligence \nthrough Digital Talent Scholarship 2018 \nprovided by Kemkominfo Republik Indonesia</string>
 
-    <!-- BottomNavigation Menu -->
-    <string name="home">Home</string>
-    <string name="learning_center">Learning Center</string>
-
-    <!-- Learning Center Content List -->
+    <!-- LearningCenterFragment -->
+    <string name="lcf_header">Learning Center</string>
+    <!-- Learning Content Lists -->
     <array name="learning_center_content">
         <item>Actinic Keatoses and Intraepithelial Carcinoma (Bowen\'s Disease)</item>
         <item>Basal Cell Carcinoma</item>
@@ -57,10 +40,33 @@
         <item>Vascular Lesions</item>
     </array>
 
-    <!-- LearningCenterFragment -->
-    <string name="lcf_header">Learning Center</string>
+    <!-- BottomNavigation Menu -->
+    <string name="home">Home</string>
+    <string name="learning_center">Learning Center</string>
 
-    <!-- Content -->
+    <!-- ScanActivity -->
+    <string name="scan_activity_title">Skin Lesion Scanner</string>
+    <!-- element_scan -->
+    <string name="scan_desc">Please make sure image of the lesion are filled up to 80% of the image. The analysis will be provided based on the datasets we used.</string>
+    <!-- element_results -->
+    <string name="results_header">Scan Results</string>
+    <string name="img_preview_header">Image preview…</string>
+    <string name="result_details_header">Result details…</string>
+    <string name="most_probable">Most probable lesion:</string>
+    <string name="most_probable_confidence_level">Confidence level:</string>
+    <string name="nothing_found">Nothings are found. Seems nothing to worry about your skin.</string>
+
+    <!-- LearningContent -->
     <string name="bcc_header">Basal Cell Carcinoma</string>
     <string name="bcc_content_overview">BCCs (Basal Cell Carcinomas) are kinds of skin cancer that arises in the skin\'s basal cells, which line the deepest layer of the epidermis. The BCCs often look like open sores, red patches, pink growths, shiny bumps, or scars and are usually caused by a combination of cumulative and intense, occasional sun exposure. The prognosis for patients with BCC is excellent, but if the disease is allowed to progress, it can cause significant morbidity.</string>
+
+    <!-- Option Menu Items -->
+    <string name="info">info</string>
+
+    <!-- Symbols and Special Characters -->
+    <string name="bullet">&#8226; </string>
+
+    <!-- Null Contents -->
+    <string name="none">-</string>
+
 </resources>

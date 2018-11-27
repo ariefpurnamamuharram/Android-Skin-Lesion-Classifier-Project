@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables,UselessParent">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/intercomponent_margin"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_search_scan"
+                tools:ignore="ContentDescription"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cuprum_bold"
+                android:textSize="@dimen/h1"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/results_header"/>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/intercomponent_margin"
+            android:layout_marginBottom="@dimen/intercomponent_margin"
+            android:background="@color/colorPrimary"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/intercomponent_margin"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/intercomponent_margin"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_picture"
+                    tools:ignore="ContentDescription"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/intercomponent_margin"
+                    android:fontFamily="@font/cuprum_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/h3"
+                    android:text="@string/img_preview_header"/>
+
+        </LinearLayout>
+
+        <ImageView
+                android:id="@+id/img_preview"
+                android:layout_width="@dimen/camera_width"
+                android:layout_height="@dimen/camera_height"
+                android:layout_gravity="center"
+                tools:ignore="ContentDescription"/>
+
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/interlayout_margin"
+            android:layout_marginBottom="@dimen/interlayout_margin"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/interlayout_margin"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/intercomponent_margin"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_document"
+                    tools:ignore="ContentDescription"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/intercomponent_margin"
+                    android:fontFamily="@font/cuprum_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/h3"
+                    android:text="@string/result_details_header"/>
+
+        </LinearLayout>
+
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="1"
+                tools:ignore="UselessLeaf">
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/intercomponent_margin">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/intercomponent_margin"
+                        android:fontFamily="@font/cuprum_regular"
+                        android:textColor="@color/colorPrimary"
+                        android:text="@string/most_probable"/>
+
+                <TextView
+                        android:id="@+id/most_probable_lesion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cuprum_regular"
+                        android:textColor="@color/colorPrimary"
+                        android:text="@string/none"/>
+
+            </TableRow>
+
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/intercomponent_margin">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/intercomponent_margin"
+                        android:fontFamily="@font/cuprum_regular"
+                        android:textColor="@color/colorPrimary"
+                        android:text="@string/most_probable_confidence_level"/>
+
+                <TextView
+                        android:id="@+id/most_probable_confidence_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/cuprum_regular"
+                        android:textColor="@color/colorPrimary"
+                        android:text="@string/none"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import id.ariefpurnamamuharram.skinlesionclassificationbyai.R
-import id.ariefpurnamamuharram.skinlesionclassificationbyai.scanner.ScannerActivity
+import id.ariefpurnamamuharram.skinlesionclassificationbyai.scan.ScanActivity
 import kotlinx.android.synthetic.main.element_nav_cardview.view.*
 import org.jetbrains.anko.support.v4.startActivity
 
@@ -19,37 +19,37 @@ class HomeFragment : Fragment() {
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
 
         rootView.btnScanAbdomen.setOnClickListener {
-            startActivity<ScannerActivity>(
+            startActivity<ScanActivity>(
                 "modelPath" to "models/abdomen/retrained_graph_abdomen.lite",
                 "labelPath" to "models/abdomen/retrained_labels_abdomen.txt"
             )
         }
 
         rootView.btnScanBack.setOnClickListener {
-            startActivity<ScannerActivity>(
+            startActivity<ScanActivity>(
                 "modelPath" to "models/back/retrained_graph_back.lite",
                 "labelPath" to "models/back/retrained_labels_back.txt"
             )
         }
 
         rootView.btnScanChest.setOnClickListener {
-            startActivity<ScannerActivity>(
+            startActivity<ScanActivity>(
                 "modelPath" to "models/chest/retrained_graph_chest.lite",
                 "labelPath" to "models/chest/retrained_labels_chest.txt"
             )
         }
 
         rootView.btnScanUpperExtremity.setOnClickListener {
-            startActivity<ScannerActivity>(
-                "modelPath" to "models/lower_extremity/retrained_graph_lower_extremity.lite",
-                "labelPath" to "models/lower_extremity/retrained_labels_lower_extremity.txt"
+            startActivity<ScanActivity>(
+                "modelPath" to "models/upper_extremity/retrained_graph_upper_extremity.lite",
+                "labelPath" to "models/upper_extremity/retrained_labels_upper_extremity.txt"
             )
         }
 
         rootView.btnScanLowerExtremity.setOnClickListener {
-            startActivity<ScannerActivity>(
-                "modelPath" to "models/upper_extremity/retrained_graph_upper_extremity.lite",
-                "labelPath" to "models/upper_extremity/retrained_labels_upper_extremity.txt"
+            startActivity<ScanActivity>(
+                "modelPath" to "models/lower_extremity/retrained_graph_lower_extremity.lite",
+                "labelPath" to "models/lower_extremity/retrained_labels_lower_extremity.txt"
             )
         }
 
